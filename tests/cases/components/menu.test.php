@@ -3,8 +3,6 @@
  * Menu Component Test
  *
  * Copyright 2008, Mark Story.
- * 823 millwood rd. 
- * toronto, ontario M4G 1W3
  *
  * Licensed under The MIT License
  * Redistributions of files must retain the above copyright notice.
@@ -15,7 +13,7 @@
  * @author Mark Story <mark@mark-story.com>
  * @license http://www.opensource.org/licenses/mit-license.php The MIT License
  */
-App::import('Component', array('Menu', 'Acl', 'Auth'));
+App::import('Component', array('AclMenu.Menu', 'Acl', 'Auth'));
 App::import('Controller', 'AppController');
 
 class TestMenuComponent extends MenuComponent {
@@ -69,11 +67,11 @@ Mock::generate('AclComponent', 'MenuTestMockAclComponent');
 class MenuComponentTestCase extends CakeTestCase {
 
 /**
- * undocumented function
+ * start test setup steps
  *
  * @return void
  **/
-	function setUp() {
+	function startTest() {
 		$this->Menu = new TestMenuComponent();
 		$this->Controller = new TestMenuController();
 		$this->Menu->Acl = new MenuTestMockAclComponent();
@@ -427,7 +425,7 @@ class MenuComponentTestCase extends CakeTestCase {
 		Cache::delete('User1_'.$this->Menu->cacheKey);
 	}
 	
-	function tearDown() {
+	function endTest() {
 		ClassRegistry::flush();
 		$this->Menu->clearCache();
 		Configure::write('Routing.admin', $this->_admin);

@@ -5,8 +5,6 @@
  * Uses ACL to generate Menus.
  *
  * Copyright 2008, Mark Story.
- * 823 millwood rd. apt#3
- * toronto, ontario M4G 1W3
  *
  * Licensed under The MIT License
  * Redistributions of files must retain the above copyright notice.

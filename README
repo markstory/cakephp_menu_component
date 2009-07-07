@@ -1,0 +1,3 @@
+h2. Acl Menu Plugin
+
+This plugin provides a component for generating menus based off of the current user session and integrates well with the "AcoExtras Plugin":http://github.com/markstory/acl_extras/tree/master I also maintain. See "mark-story.com for additional info and usage":http://mark-story.com/posts/view/acl-menu-component
